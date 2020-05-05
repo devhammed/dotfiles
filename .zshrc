@@ -132,12 +132,6 @@ if [[ -f "$HOME/.my_profile.sh" ]]; then
   source $HOME/.my_profile.sh
 fi
 
-# Set TERM to 256 color
-export TERM='xterm-256color'
-
-# Set Unicode Support
-export LANG='en_NG.UTF-8'
-
 # Initialize the completion system
 autoload -U compinit && compinit
 
