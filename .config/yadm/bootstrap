@@ -30,13 +30,26 @@ if is_not_installed rustc; then
 fi
 
 if is_not_installed composer; then
+  echo "Installing PHP composer"
   local_bin="$HOME/.local/bin"
   mkdir -p $local_bin
   wget -O $local_bin/composer https://getcomposer.org/composer-stable.phar
 fi
 
+if is_not_installed zsh; then
+  echo "Installing zsh"
+  sudo apt install zsh
+  echo "Changing current user shell to zsh"
+  chsh -s `which zsh` $USER
+fi
+
 ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 ZSH_CUSTOM_PLUGINS="$ZSH_CUSTOM/plugins"
+
+if [ ! -d "$ZSH_CUSTOM" ]; then
+  echo "Installing oh-my-zsh"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
 
 if [ ! -d "$ZSH_CUSTOM/themes/spaceship-prompt" ]; then
   git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
