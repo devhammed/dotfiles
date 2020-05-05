@@ -87,3 +87,10 @@ cl() {
 gi() {
   curl -sLw "\n" "https://www.gitignore.io/api/$@"
 }
+
+# Set TERM to 256 color
+export TERM='xterm-256color'
+
+# Set Unicode Support
+export LANG='en_NG.UTF-8'
+
