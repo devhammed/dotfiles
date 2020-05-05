@@ -11,3 +11,6 @@ if [ -f "$HOME/.Brewfile" ]; then
   echo "Updating homebrew bundle"
   brew bundle --global
 fi
+
+echo "Updating the yadm repo origin URL"
+yadm remote set-url origin "git@github.com:devhammed/dotfiles.git"
