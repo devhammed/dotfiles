@@ -20,12 +20,14 @@ if [ -f "$HOME/.Brewfile" ]; then
 fi
 
 if is_not_installed flutter; then
+  echo "Installing flutter"
   flutter_sdk_path="$HOME/.local/share/flutter"
   mkdir -p $flutter_sdk_path
   git clone https://github.com/flutter/flutter.git -b beta $flutter_sdk_path
 fi
 
 if is_not_installed rustc; then
+  echo "Installing rust"
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 fi
 
