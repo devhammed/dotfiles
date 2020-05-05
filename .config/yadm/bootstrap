@@ -34,3 +34,9 @@ if is_not_installed composer; then
   mkdir -p $local_bin
   wget -O $local_bin/composer https://getcomposer.org/composer-stable.phar
 fi
+
+ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
+if [ ! -d "$ZSH_CUSTOM/themes/spaceship-prompt" ]; then
+  git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+  ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+fi
