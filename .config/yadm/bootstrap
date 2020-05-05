@@ -36,7 +36,21 @@ if is_not_installed composer; then
 fi
 
 ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
+ZSH_CUSTOM_PLUGINS="$ZSH_CUSTOM/plugins"
+
 if [ ! -d "$ZSH_CUSTOM/themes/spaceship-prompt" ]; then
   git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
   ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+fi
+
+if [ ! -d "$ZSH_CUSTOM_PLUGINS/zsh-completions" ]; then
+  git clone https://github.com/zsh-users/zsh-completions "$ZSH_CUSTOM_PLUGINS/zsh-completions"
+fi
+
+if [ ! -d "$ZSH_CUSTOM_PLUGINS/zsh-syntax-highlighting" ]; then
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH_CUSTOM_PLUGINS/zsh-syntax-highlighting"
+fi
+
+if [ ! -d "$ZSH_CUSTOM_PLUGINS/zsh-autosuggestions" ]; then
+  git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH_CUSTOM_PLUGINS/zsh-autosuggestions"
 fi
