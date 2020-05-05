@@ -1,3 +1,13 @@
 #!/bin/sh
 
 cd $HOME
+
+if ! command -v brew >/dev/null 2>&1; then
+  echo "Installing homebrew"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+fi
+
+if [ -f "$HOME/.Brewfile" ]; then
+  echo "Updating homebrew bundle"
+  brew bundle --global
+fi
