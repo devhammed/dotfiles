@@ -6,7 +6,7 @@ echo "Updating the yadm repo origin URL"
 yadm remote set-url origin "git@github.com:devhammed/dotfiles.git"
 
 is_not_installed() {
-	! command -v $1 >/dev/null 2>&1
+  ! command -v $1 >/dev/null 2>&1
 }
 
 if is_not_installed brew; then
@@ -32,5 +32,5 @@ fi
 if is_not_installed composer; then
   local_bin="$HOME/.local/bin"
   mkdir -p $local_bin
-  wget -O $local_bin/composer https://getcomposer.org/composer.phar
+  wget -O $local_bin/composer https://getcomposer.org/composer-stable.phar
 fi
