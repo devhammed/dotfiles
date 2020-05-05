@@ -2,7 +2,14 @@
 
 cd $HOME
 
-if ! command -v brew >/dev/null 2>&1; then
+echo "Updating the yadm repo origin URL"
+yadm remote set-url origin "git@github.com:devhammed/dotfiles.git"
+
+is_not_installed() {
+	! command -v $1 >/dev/null 2>&1
+}
+
+if is_not_installed brew; then
   echo "Installing homebrew"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
@@ -12,5 +19,18 @@ if [ -f "$HOME/.Brewfile" ]; then
   brew bundle --global
 fi
 
-echo "Updating the yadm repo origin URL"
-yadm remote set-url origin "git@github.com:devhammed/dotfiles.git"
+if is_not_installed flutter; then
+  flutter_sdk_path="$HOME/.local/share/flutter"
+  mkdir -p $flutter_sdk_path
+  git clone https://github.com/flutter/flutter.git -b beta $flutter_sdk_path
+fi
+
+if is_not_installed rustc; then
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+fi
+
+if is_not_installed composer; then
+  local_bin="$HOME/.local/bin"
+  mkdir -p $local_bin
+  wget -O $local_bin/composer https://getcomposer.org/composer.phar
+fi
