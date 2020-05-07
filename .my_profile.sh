@@ -15,7 +15,6 @@ export PATH="$PATH:$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin";
 export MANPATH="/home/devhammed/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
 export INFOPATH="/home/devhammed/.linuxbrew/share/info${INFOPATH+:$INFOPATH}";
 fpath+="$HOME/.linuxbrew/share/zsh/site-functions"
-source "$HOMEBREW_PREFIX/opt/git-extras/share/git-extras/git-extras-completion.zsh"
 
 # Load Deno Environment
 export DENO_INSTALL="$HOME/.deno"
