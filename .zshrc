@@ -132,6 +132,9 @@ if [[ -f "$HOME/.my_profile.sh" ]]; then
   source $HOME/.my_profile.sh
 fi
 
+# Load git-extras completion
+source $HOMEBREW_PREFIX/opt/git-extras/share/git-extras/git-extras-completion.zsh
+
 # Initialize the completion system
 autoload -U compinit && compinit
 
