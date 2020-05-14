@@ -83,6 +83,7 @@ alias pip='pip3'
 alias pyvenv='python3 -m venv'
 alias spotdl='spotdl -m -ns'
 alias backup='rsync -rtvu'
+alias cat='bat'
 alias usudo='sudo -E env "PATH=$PATH"'
 
 # Custom Functions
