@@ -1,0 +1,16 @@
+#!/bin/bash
+
+script=`basename "$0"`
+
+if [[ $# -ne 3 ]]; then
+  echo "$script: A minimal utility to add SRT file stream to a video using FFMPEG, by Oyedele Hammed (more at https://github.com/devhammed/bash-scripts)."
+  echo ""
+  echo "Usage: $script VIDEO_FILE SRT_FILE OUTPUT"
+  echo ""
+  echo "e.g $script awesome_video.mp4 awesome_subtitle.srt awesome_video_with_srt.mp4"
+  echo ""
+  exit
+fi
+
+ffmpeg -i "$1" -f srt -i "$2"  -c:v copy -c:s mov_text "$3"
+
