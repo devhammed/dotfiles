@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if [[ "$#" -ne 3 ]]; then
+  echo 'Usage: create-mysql-db NEW_DB_NAME NEW_DB_USER NEW_DB_USER_PASSWORD'
+  exit 1
+fi
+
+QUERY="CREATE DATABASE $1; CREATE USER IF NOT EXISTS '$2'@'localhost' IDENTIFIED WITH mysql_native_password BY '$3'; GRANT ALL PRIVILEGES ON $1.* TO '$2'@'localhost'; FLUSH PRIVILEGES;"
+
+mysql -u root -e "$QUERY" -p
+
