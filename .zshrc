@@ -141,3 +141,4 @@ autoload -U compinit && compinit
 # Enhanced form of menu completion called `menu selection'
 zmodload -i zsh/complist
 . "/home/devhammed/.acme.sh/acme.sh.env"
+. <(denon --completion)
