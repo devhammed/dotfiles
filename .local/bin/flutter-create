@@ -2,7 +2,7 @@
 
 script=`basename "$0"`
 
-if [[ $# -ne 2 ]]; then
+if [[ $# -le 2 ]]; then
   echo "$script: Simple script to create Flutter projects properly."
   echo ""
   echo "Usage: $script REVERSED_DOMAIN OUTPUT_FOLDER [TYPE: app (default), module, package, plugin] [DESCRIPTION]"
@@ -13,14 +13,14 @@ if [[ $# -ne 2 ]]; then
 fi
 
 org=${1%.*}
-type=${3:-app}
-app_name=${${1#$org}#.}
+template=${3:-app}
+app_name=${1/$org./}
 description=${4:-'A new Flutter project.'}
 
 flutter create --org "$org" \
                --project-name "$app_name" \
                --ios-language swift \
                --android-language kotlin \
-               --template="$type" \
+               --template="$template" \
                --description "$description" \
                "$2"
