@@ -135,6 +135,16 @@ fi
 # Load git-extras completion
 source $HOMEBREW_PREFIX/opt/git-extras/share/git-extras/git-extras-completion.zsh
 
+# Load Dotnet Completion
+_dotnet_zsh_complete()
+{
+  local completions=("$(dotnet complete "$words")")
+
+  reply=( "${(ps:\n:)completions}" )
+}
+
+compctl -K _dotnet_zsh_complete dotnet
+
 # Initialize the completion system
 autoload -U compinit && compinit
 
