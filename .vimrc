@@ -53,4 +53,7 @@ set expandtab
 set smarttab
 
 " Set different identation for PHP
-autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4
+autocmd BufEnter *.php setlocal shiftwidth=4 tabstop=4 softtabstop=4
+
+" Set nonumber for .crt and .key files
+autocmd BufEnter *.key,*.crt setlocal nonumber
