@@ -1,0 +1,27 @@
+#!/bin/bash
+
+script=`basename "$0"`
+
+if [[ "$1" = 'h' || "$1" = 'help' ]]; then
+  echo "$script: A minimal utility to update packages and remove packages that are not needed again, by Oyedele Hammed (more at https://github.com/devhammed/bash-scripts)."
+  echo ""
+  echo "Usage: $script"
+  echo ""
+  exit
+fi
+
+sudo apt update || true && \
+  sudo apt upgrade -y || true && \
+  sudo apt clean || true && \
+  sudo apt autoremove || true && \
+  sudo ballerina update || true && \
+  sudo ballerina dist update || true && \
+  snap refresh || true && \
+  brew upgrade || true && \
+  brew cleanup || true && \
+  npm up -g --force || true && \
+  composer global update || true && \
+  rustup update || true && \
+  deno upgrade || true && \
+  flutter upgrade || true && \
+  flutter precache --android --web || true
