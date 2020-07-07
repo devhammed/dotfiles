@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# Usage instructions at https://gist.github.com/devhammed/46e9ceca323ba7c0d0a25d9d8f705168
 # The branch (defaults to master) to update,
 # can be the first parameter if there is upstream remote already
 branch="${1:-master}"
