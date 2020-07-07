@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# The branch (defaults to master) to update,
+# can be the first parameter if there is upstream remote already
+branch="${1:-master}"
+
+# Check if there is no existing 'upstream' remote repo
+if [[ ! "$(git remote)" =~ "upstream" ]]; then
+  # Add upstream remote repo
+  git remote add upstream "$1"
+
+  # Set the branch to second parameter since there is no upstream
+  branch="${2:-master}"
+fi
+
+# Fetch and merge updates from upstream repo with the origin repo branch
+git pull upstream "$branch"
+
+# Push the changes to the origin repo branch
+git push origin "$branch"
