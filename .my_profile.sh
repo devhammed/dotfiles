@@ -85,6 +85,7 @@ alias spotdl='spotdl -m -ns --trim-silence -f "{artist}_-_{track-name}.{output-e
 alias backup='rsync -rtvu'
 alias cat='bat'
 alias usudo='sudo -E env "PATH=$PATH"'
+alias fsize='du -sh'
 
 # Custom Functions
 cl() {
