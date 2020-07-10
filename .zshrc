@@ -94,7 +94,7 @@ plugins=(
 SPACESHIP_USER_SHOW="always"
 SPACESHIP_GIT_STATUS_COLOR="magenta"
 SPACESHIP_CHAR_SYMBOL="λ "
-SPACESHIP_VENV_SYMBOL="(venv)" 
+SPACESHIP_VENV_SYMBOL="(venv) " 
 
 # Load oh-my-zsh Framework
 source $ZSH/oh-my-zsh.sh

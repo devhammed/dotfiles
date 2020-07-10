@@ -23,4 +23,6 @@ esac
 yadm clone --bootstrap 'git@github.com:devhammed/dotfiles.git'
 ```
 
+PS: You should remove `--bootstrap` from the command if you don't want to install softwares (Flutter, Rust, Homebrew etc.) or you want to do that later.
+
 3. Enjoy!
