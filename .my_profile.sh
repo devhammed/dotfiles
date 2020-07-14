@@ -62,6 +62,9 @@ export PATH="/opt/android-studio/plugins/Kotlin/kotlinc/bin:$PATH"
 # Load z-jump Environment
 source $HOME/.local/lib/z.sh
 
+# Load Node Extra CA
+export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
+
 # Load PPSSPP Environment
 export PATH="$HOME/Downloads/psp:$PATH"
 
