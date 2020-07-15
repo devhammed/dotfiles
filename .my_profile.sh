@@ -28,10 +28,8 @@ export PATH="$FLUTTER_SDK_PATH:$FLUTTER_SDK_PATH/cache/dart-sdk/bin:$HOME/.pub-c
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # Load Go Environment
-export GOPATH="$HOME/Go"
+export GOPATH="$HOME/Tools/go"
 export PATH="$GOPATH/bin:$PATH"
-
-# Load Go Workspace
 export GOSRC="$GOPATH/src/github.com/$USER"
 if [[ ! -d "$GOSRC" ]]; then
   mkdir -p "$GOSRC"
