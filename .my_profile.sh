@@ -21,13 +21,14 @@ export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Load Flutter and Dart Environment
-export FLUTTER_SDK_PATH="$HOME/.local/share/flutter/bin"
+export FLUTTER_SDK_PATH="$HOME/Tools/flutter/bin"
 export PATH="$FLUTTER_SDK_PATH:$FLUTTER_SDK_PATH/cache/dart-sdk/bin:$HOME/.pub-cache/bin:$PATH"
 
 # Load Composer Environment
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # Load Go Environment
+export GO111MODULE=on
 export GOPATH="$HOME/Tools/go"
 export PATH="$GOPATH/bin:$PATH"
 export GOSRC="$GOPATH/src/github.com/$USER"
@@ -41,7 +42,7 @@ export WASM_BINDGEN_PATH="$HOME/.cache/.wasm-pack/wasm-bindgen-cargo-install-0.2
 export PATH="$WASM_BINDGEN_PATH:$WASM_BINDGEN_PATH/bin:$PATH"
 
 # Load V Environment
-export PATH="$HOME/.local/lib/v:$PATH"
+export PATH="$HOME/Tools/v:$PATH"
 
 # Load TinyGo Environment
 export PATH="/usr/local/tinygo/bin:$PATH"
