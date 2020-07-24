@@ -17,7 +17,7 @@ export INFOPATH="/home/devhammed/.linuxbrew/share/info${INFOPATH+:$INFOPATH}";
 fpath+="$HOME/.linuxbrew/share/zsh/site-functions"
 
 # Load Deno Environment
-export DENO_INSTALL="$HOME/.deno"
+export DENO_INSTALL="$HOME/Tools/deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Load Flutter and Dart Environment
@@ -43,6 +43,9 @@ export PATH="$WASM_BINDGEN_PATH:$WASM_BINDGEN_PATH/bin:$PATH"
 
 # Load V Environment
 export PATH="$HOME/Tools/v:$PATH"
+
+# Load Portable Ruby 2.6.3 Environment
+export PATH="$PATH:$HOME/Tools/portable-ruby/bin"
 
 # Load TinyGo Environment
 export PATH="/usr/local/tinygo/bin:$PATH"
