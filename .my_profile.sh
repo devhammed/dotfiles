@@ -17,8 +17,8 @@ export INFOPATH="/home/devhammed/.linuxbrew/share/info${INFOPATH+:$INFOPATH}";
 fpath+="$HOME/.linuxbrew/share/zsh/site-functions"
 
 # Load Deno Environment
-export DENO_INSTALL="$HOME/Tools/deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
+export DENO_INSTALL_ROOT="$HOME/Tools/deno"
+export PATH="$DENO_INSTALL_ROOT/bin:$PATH"
 
 # Load Flutter and Dart Environment
 export FLUTTER_SDK_PATH="$HOME/Tools/flutter/bin"
