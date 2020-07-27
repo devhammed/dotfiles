@@ -91,7 +91,6 @@ alias backup='rsync -rtvu'
 alias cat='bat'
 alias usudo='sudo -E env "PATH=$PATH"'
 alias fsize='du -sh'
-alias jq='oq'
 
 # Custom Functions
 cl() {
