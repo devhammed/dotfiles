@@ -63,18 +63,18 @@ if is_not_installed zsh; then
   chsh -s `which zsh` $USER
 fi
 
-# Install ZSH Plugins and Themes
+# Install Starship Prompt
+if is_not_installed starship; then
+  curl -fsSL https://starship.rs/install.sh | bash
+fi
+
+# Install ZSH Plugins
 ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 ZSH_CUSTOM_PLUGINS="$ZSH_CUSTOM/plugins"
 
 if [ ! -d "$ZSH_CUSTOM" ]; then
   echo "Installing oh-my-zsh"
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi
-
-if [ ! -d "$ZSH_CUSTOM/themes/spaceship-prompt" ]; then
-  git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
-  ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 fi
 
 if [ ! -d "$ZSH_CUSTOM_PLUGINS/zsh-completions" ]; then
