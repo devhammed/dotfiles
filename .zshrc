@@ -133,7 +133,7 @@ if [[ -f "$HOME/.my_profile.sh" ]]; then
 fi
 
 # Load git-extras completion
-source $HOMEBREW_PREFIX/opt/git-extras/share/git-extras/git-extras-completion.zsh
+source "$HOMEBREW_PREFIX/opt/git-extras/share/git-extras/git-extras-completion.zsh"
 
 # Load Dotnet Completion
 _dotnet_zsh_complete()
@@ -151,5 +151,5 @@ autoload -U compinit && compinit
 # Enhanced form of menu completion called `menu selection'
 zmodload -i zsh/complist
 
-# Load Starship
+# Load Starship Prompt
 eval "$(starship init zsh)"
