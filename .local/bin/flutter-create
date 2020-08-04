@@ -2,7 +2,7 @@
 
 script=`basename "$0"`
 
-if [[ $# -le 2 ]]; then
+if [[ $# -lt 2 ]]; then
   echo "$script: Simple script to create Flutter projects properly."
   echo ""
   echo "Usage: $script REVERSED_DOMAIN OUTPUT_FOLDER [TYPE: app (default), module, package, plugin] [DESCRIPTION]"

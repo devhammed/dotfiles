@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [[ $# -lt 1 ]]; then
+  echo "Usage: send-file FILE [EXPIRES (w, m, y modifiers e.g 2w for 2 weeks) (defaults to 1w)]"
+  exit 1
+fi
+
+curl --progress-bar -F "file=@$1" "https://file.io/?expires=${2:-1w}"
