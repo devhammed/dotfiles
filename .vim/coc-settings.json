@@ -1,6 +1,8 @@
 {
   "coc.preferences.formatOnSaveFiletypes": [
-    "dart"
+    "dart",
+    "ruby",
+    "javascript"
   ],
   "solargraph.rename": true,
   "solargraph.formatting": true,
