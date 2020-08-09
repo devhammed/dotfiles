@@ -4,6 +4,7 @@
     "ruby",
     "javascript"
   ],
+  "suggest.noselect": false,
   "solargraph.rename": true,
   "solargraph.formatting": true,
   "cSpell.userWords": [
