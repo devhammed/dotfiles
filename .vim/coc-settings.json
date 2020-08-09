@@ -2,12 +2,14 @@
   "coc.preferences.formatOnSaveFiletypes": [
     "dart",
     "ruby",
-    "javascript"
+    "javascript",
+    "python"
   ],
   "suggest.noselect": false,
   "solargraph.rename": true,
   "solargraph.formatting": true,
   "cSpell.userWords": [
     "solargraph"
-  ]
+  ],
+  "python.jediEnabled": false
 }
