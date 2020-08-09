@@ -3,13 +3,24 @@
     "dart",
     "ruby",
     "javascript",
-    "python"
+    "python",
+    "json",
+    "vala"
   ],
   "suggest.noselect": false,
   "solargraph.rename": true,
   "solargraph.formatting": true,
   "cSpell.userWords": [
-    "solargraph"
+    "solargraph",
+    "vala"
   ],
-  "python.jediEnabled": false
+  "python.jediEnabled": false,
+  "languageserver": {
+    "vala": {
+      "command": "vala-language-server",
+      "filetypes": [
+        "vala"
+      ]
+    }
+  }
 }
