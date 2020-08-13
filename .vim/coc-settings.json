@@ -19,7 +19,8 @@
     "vala": {
       "command": "vala-language-server",
       "filetypes": [
-        "vala"
+        "vala",
+        "genie"
       ]
     }
   }

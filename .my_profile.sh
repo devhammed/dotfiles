@@ -59,7 +59,7 @@ export PATH="$ANDROID_HOME/platform-tools:$PATH"
 export ADB="$ANDROID_HOME/platform-tools/adb"
 
 # Load Kotlin Environment
-export PATH="/opt/android-studio/plugins/Kotlin/kotlinc/bin:$PATH"
+export PATH="$HOME/Tools/android-studio/plugins/Kotlin/kotlinc/bin:$PATH"
 
 # Load z-jump Environment
 source $HOME/.local/lib/z.sh
