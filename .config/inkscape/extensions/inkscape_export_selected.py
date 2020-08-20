@@ -100,6 +100,9 @@ class InkscapeExportSelected(inkex.Effect):
             '--export-filename=%s' % output,
         ]
 
+        if fformat == 'svg':
+            cmd.append('--export-plain-svg')
+
         if self.options.text_to_path == 'true':
             cmd.append('--export-text-to-path')
 
