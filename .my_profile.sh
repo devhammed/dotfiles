@@ -58,9 +58,6 @@ export PATH="$ANDROID_HOME/tools/bin:$PATH"
 export PATH="$ANDROID_HOME/platform-tools:$PATH"
 export ADB="$ANDROID_HOME/platform-tools/adb"
 
-# Load Kotlin Environment
-export PATH="$HOME/Tools/android-studio/plugins/Kotlin/kotlinc/bin:$PATH"
-
 # Load Node Extra CA
 export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
 
