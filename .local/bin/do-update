@@ -23,6 +23,7 @@ sudo apt update || true && \
   npm up -g --force || true && \
   composer global update || true && \
   rustup update || true && \
+  cargo install-update -a || true && \
   deno upgrade || true && \
   flutter upgrade || true && \
   flutter precache --android --web || true
