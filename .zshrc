@@ -114,11 +114,11 @@ autoload -U compinit && compinit
 # Enhanced form of menu completion called `menu selection'
 zmodload -i zsh/complist
 
-# Load Starship Prompt
-eval "$(starship init zsh)"
-
 # Load Zoxide
 eval "$(zoxide init zsh)"
+
+# Load Starship Prompt
+eval "$(starship init zsh)"
 
 # twilio autocomplete setup
 TWILIO_AC_ZSH_SETUP_PATH=/home/devhammed/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH;
