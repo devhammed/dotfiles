@@ -155,6 +155,9 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " Organize imports on save for Go files
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 
+" Add Prettier command
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
 " == end:coc.nvim settings ==
 
 " Enable mouse support
