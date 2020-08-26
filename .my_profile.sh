@@ -61,9 +61,6 @@ export ADB="$ANDROID_HOME/platform-tools/adb"
 # Load Kotlin Environment
 export PATH="$HOME/Tools/android-studio/plugins/Kotlin/kotlinc/bin:$PATH"
 
-# Load z-jump Environment
-source $HOME/.local/lib/z.sh
-
 # Load Node Extra CA
 export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
 
@@ -91,6 +88,8 @@ alias backup='rsync -rtvu'
 alias cat='bat'
 alias usudo='sudo -E env "PATH=$PATH"'
 alias fsize='du -sh'
+alias betty="$HOME/Tools/betty/main.rb"
+alias create-wp-site='composer create-project --prefer-dist wordplate/wordplate'
 
 # Custom Functions
 cl() {

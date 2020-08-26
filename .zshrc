@@ -116,3 +116,9 @@ zmodload -i zsh/complist
 
 # Load Starship Prompt
 eval "$(starship init zsh)"
+
+# Load Zoxide
+eval "$(zoxide init zsh)"
+
+# twilio autocomplete setup
+TWILIO_AC_ZSH_SETUP_PATH=/home/devhammed/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH;
