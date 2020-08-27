@@ -25,5 +25,6 @@ sudo apt update || true && \
   rustup update || true && \
   cargo install-update -a || true && \
   deno upgrade || true && \
+  dotnet tool list --global | awk 'NR > 2 {print $1}' | xargs -L1 dotnet tool update --global || true && \
   flutter upgrade || true && \
   flutter precache --android --web || true
