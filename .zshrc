@@ -120,5 +120,8 @@ eval "$(zoxide init zsh)"
 # Load Starship Prompt
 eval "$(starship init zsh)"
 
-# twilio autocomplete setup
-TWILIO_AC_ZSH_SETUP_PATH=/home/devhammed/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH;
+# Heroku autocomplete setup
+eval $(heroku autocomplete:script zsh)
+
+# Twilio autocomplete setup
+TWILIO_AC_ZSH_SETUP_PATH=$HOME/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH;

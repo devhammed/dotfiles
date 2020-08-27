@@ -47,9 +47,6 @@ export PATH="$HOME/Tools/v:$PATH"
 # Load Portable Ruby 2.6.3 Environment
 export PATH="$PATH:$HOME/Tools/portable-ruby/bin"
 
-# Load TinyGo Environment
-export PATH="/usr/local/tinygo/bin:$PATH"
-
 # Load Android SDK Environment
 export ANDROID_HOME="$HOME/Android/Sdk"
 export PATH="$ANDROID_HOME/tools:$PATH"
@@ -58,7 +55,7 @@ export PATH="$ANDROID_HOME/tools/bin:$PATH"
 export PATH="$ANDROID_HOME/platform-tools:$PATH"
 export ADB="$ANDROID_HOME/platform-tools/adb"
 
-# Load Node Extra CA
+# Load Node.js extra CA Certificates
 export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
 
 # Load PPSSPP Environment
@@ -66,9 +63,6 @@ export PATH="$HOME/Downloads/psp:$PATH"
 
 # Set CLI Editor
 export EDITOR="vim"
-
-# Setup Heroku autocomplete
-eval $(heroku autocomplete:script zsh)
 
 # Set CLI Web Browser
 export BROWSER="google-chrome"
@@ -92,6 +86,7 @@ alias create-wp-site='composer create-project --prefer-dist wordplate/wordplate'
 cl() {
   cd "$@" && ls
 }
+
 gi() {
   curl -sLw "\n" "https://www.gitignore.io/api/$@"
 }
