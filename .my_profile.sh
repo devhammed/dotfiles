@@ -44,9 +44,6 @@ export PATH="$WASM_BINDGEN_PATH:$WASM_BINDGEN_PATH/bin:$PATH"
 # Load V Environment
 export PATH="$HOME/Tools/v:$PATH"
 
-# Load Portable Ruby 2.6.3 Environment
-export PATH="$PATH:$HOME/Tools/portable-ruby/bin"
-
 # Load Android SDK Environment
 export ANDROID_HOME="$HOME/Android/Sdk"
 export PATH="$ANDROID_HOME/tools:$PATH"
