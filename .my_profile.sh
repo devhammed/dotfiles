@@ -26,6 +26,8 @@ export PATH="$FLUTTER_SDK_PATH:$FLUTTER_SDK_PATH/cache/dart-sdk/bin:$HOME/.pub-c
 
 # Load Composer Environment
 export PATH="$HOME/.composer/vendor/bin:$PATH"
+export COMPOSER_ALLOW_XDEBUG=1
+export COMPOSER_DISABLE_XDEBUG_WARN=1
 
 # Load Go Environment
 export GO111MODULE=on

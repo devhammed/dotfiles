@@ -117,11 +117,11 @@ zmodload -i zsh/complist
 # Load Zoxide
 eval "$(zoxide init zsh)"
 
-# Load Starship Prompt
-eval "$(starship init zsh)"
-
 # Heroku autocomplete setup
 eval $(heroku autocomplete:script zsh)
 
 # Twilio autocomplete setup
 TWILIO_AC_ZSH_SETUP_PATH=$HOME/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH;
+
+# Load Starship Prompt
+eval "$(starship init zsh)"
