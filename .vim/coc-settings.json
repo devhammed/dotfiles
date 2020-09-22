@@ -16,6 +16,12 @@
     "vala": {
       "command": "vala-language-server",
       "filetypes": ["vala", "genie"]
+    },
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
     }
   }
 }
