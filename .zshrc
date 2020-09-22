@@ -117,8 +117,5 @@ zmodload -i zsh/complist
 # Load Zoxide
 eval "$(zoxide init zsh)"
 
-# Heroku autocomplete setup
-eval $(heroku autocomplete:script zsh)
-
 # Load Starship Prompt
 eval "$(starship init zsh)"
