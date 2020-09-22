@@ -7,6 +7,9 @@ export LANG='en_NG.UTF-8'
 # Load User Binaries Environment
 export PATH="$HOME/.local/bin:$PATH"
 
+# Load Custom ZSH Completions
+fpath+="$HOME/.zsh_completions"
+
 # Load Homebrew Environment
 export HOMEBREW_PREFIX="/home/devhammed/.linuxbrew";
 export HOMEBREW_CELLAR="/home/devhammed/.linuxbrew/Cellar";

@@ -73,15 +73,12 @@ plugins=(
   pip
   yarn
   sudo
-  rsync
-  gatsby
-  wp-cli
   golang
+  heroku
+  rustup
   flutter
-  systemd
   artisan
-  gitignore
-  docker-compose
+  minikube
   zsh-completions
   zsh-autosuggestions
   git-flow-completion

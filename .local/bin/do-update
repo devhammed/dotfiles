@@ -10,12 +10,15 @@ if [[ "$1" = 'h' || "$1" = 'help' ]]; then
   exit
 fi
 
+# Update Binaries
+echo "Updating Binaries..."
 sudo apt update || true && \
   sudo apt upgrade -y || true && \
   sudo apt clean || true && \
   sudo apt autoremove || true && \
-  sudo ballerina update || true && \
-  sudo ballerina dist update || true && \
+  sudo gem update || true && \
+  ballerina update || true && \
+  ballerina dist update || true && \
   snap refresh || true && \
   brew upgrade || true && \
   brew cleanup || true && \
@@ -28,3 +31,9 @@ sudo apt update || true && \
   dotnet tool list --global | awk 'NR > 2 {print $1}' | xargs -L1 dotnet tool update --global || true && \
   flutter upgrade || true && \
   flutter precache --android --web || true
+
+# Update Completions
+echo "Updating ZSH Completions..."
+deno completions zsh > "$HOME/.zsh_completions/_deno"
+gh completion -s zsh > "$HOME/.zsh_completions/_gh"
+ 
