@@ -10,18 +10,12 @@
   "suggest.noselect": false,
   "solargraph.rename": true,
   "solargraph.formatting": true,
-  "cSpell.userWords": [
-    "solargraph",
-    "vala"
-  ],
+  "cSpell.userWords": ["solargraph", "vala"],
   "python.jediEnabled": false,
   "languageserver": {
     "vala": {
       "command": "vala-language-server",
-      "filetypes": [
-        "vala",
-        "genie"
-      ]
+      "filetypes": ["vala", "genie"]
     }
   }
 }
