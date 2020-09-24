@@ -7,6 +7,10 @@
     "json",
     "vala"
   ],
+  "prettier.semi": false,
+  "prettier.trailingComma": "none",
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
   "suggest.noselect": false,
   "solargraph.rename": true,
   "solargraph.formatting": true,
