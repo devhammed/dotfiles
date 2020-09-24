@@ -1,0 +1,25 @@
+[user]
+	email = itz.harmid@gmail.com
+	name = Hammed Oyedele
+	signingkey = B8E2CB30A8D8071C
+	username = devhammed
+[init]
+	templateDir = ~/.git-template
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[alias]
+	unstage = reset --
+	remove-untracked = clean -d -x -f
+	sweep = !git fetch -p && git branch -d $(git branch --merged | grep -v master)
+	branches = branch -a
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[tag]
+	forceSignAnnotated = true
+[pull]
+	rebase = false
