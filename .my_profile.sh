@@ -24,8 +24,7 @@ export DENO_INSTALL_ROOT="$HOME/Tools/deno"
 export PATH="$DENO_INSTALL_ROOT/bin:$PATH"
 
 # Load Flutter and Dart Environment
-export FLUTTER_SDK_PATH="$HOME/Tools/flutter/bin"
-export PATH="$FLUTTER_SDK_PATH:$FLUTTER_SDK_PATH/cache/dart-sdk/bin:$HOME/.pub-cache/bin:$PATH"
+export PATH="$HOME/Tools/flutter/bin:$HOME/.pub-cache/bin:$PATH"
 
 # Load Composer Environment
 export PATH="$HOME/.composer/vendor/bin:$PATH"
