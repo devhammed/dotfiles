@@ -76,6 +76,7 @@ plugins=(
   golang
   heroku
   rustup
+  wp-cli
   flutter
   artisan
   minikube
@@ -113,6 +114,9 @@ zmodload -i zsh/complist
 
 # Load Zoxide
 eval "$(zoxide init zsh)"
+
+# Load The Fuck
+eval "$(thefuck --alias f)"
 
 # Load Starship Prompt
 eval "$(starship init zsh)"

@@ -22,6 +22,7 @@ sudo apt update || true && \
   snap refresh || true && \
   brew upgrade || true && \
   brew cleanup || true && \
+  wp cli update || true && \
   v up || true && \
   npm up -g --force || true && \
   composer global update || true && \
