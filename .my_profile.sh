@@ -50,9 +50,8 @@ export PATH="$HOME/Tools/v:$PATH"
 
 # Load Android SDK Environment
 export ANDROID_HOME="$HOME/Android/Sdk"
-export PATH="$ANDROID_HOME/tools:$PATH"
 export PATH="$ANDROID_HOME/emulator:$PATH"
-export PATH="$ANDROID_HOME/tools/bin:$PATH"
+export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$PATH"
 export PATH="$ANDROID_HOME/platform-tools:$PATH"
 export ADB="$ANDROID_HOME/platform-tools/adb"
 
@@ -84,7 +83,9 @@ alias cat='bat'
 alias usudo='sudo -E env "PATH=$PATH"'
 alias fsize='du -sh'
 alias betty="$HOME/Tools/betty/main.rb"
-alias create-wp-site='composer create-project --prefer-dist wordplate/wordplate'
+alias create-wp-app='composer create-project --prefer-dist wordplate/wordplate'
+alias create-laravel-app='composer create-project --prefer-dist laravel/laravel'
+alias create-mantle-app='composer create-project --remove-vcs --stability=dev --no-cache --no-interaction alleyinteractive/mantle'
 
 # Custom Functions
 cl() {
@@ -97,5 +98,5 @@ gi() {
 
 
 dockerps() {
-  docker ps --format="ID\\t{{.ID}}\nName\\t{{.Names}}\nImage\\t{{.Image}}\nPorts\\t{{.Ports}}\nCommand\\t{{.Command}}\nCreated\\t{{.CreatedAt}}\nStatus\\t{{.Status}}\n"
+  docker ps "$@" --format="ID\\t{{.ID}}\nName\\t{{.Names}}\nImage\\t{{.Image}}\nPorts\\t{{.Ports}}\nCommand\\t{{.Command}}\nCreated\\t{{.CreatedAt}}\nStatus\\t{{.Status}}\n"
 }
