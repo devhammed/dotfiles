@@ -4,6 +4,9 @@ export TERM='xterm-256color'
 # Set Unicode Support
 export LANG='en_NG.UTF-8'
 
+# Fix QT DPI issue
+export QT_FONT_DPI=96
+
 # Load User Binaries Environment
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -85,7 +88,6 @@ alias fsize='du -sh'
 alias betty="$HOME/Tools/betty/main.rb"
 alias create-wp-app='composer create-project --prefer-dist wordplate/wordplate'
 alias create-laravel-app='composer create-project --prefer-dist laravel/laravel'
-alias create-mantle-app='composer create-project --remove-vcs --stability=dev --no-cache --no-interaction alleyinteractive/mantle'
 
 # Custom Functions
 cl() {
