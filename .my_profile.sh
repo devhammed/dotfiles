@@ -73,6 +73,9 @@ export EDITOR="vim"
 # Set CLI Web Browser
 export BROWSER="google-chrome"
 
+# Prevent Python Bytecode creation
+export PYTHONDONTWRITEBYTECODE="off"
+
 # Custom Aliases
 alias kgif='mkgif 30 720 0:00 0'
 alias la='ls -la'
