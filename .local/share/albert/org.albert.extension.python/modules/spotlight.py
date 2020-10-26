@@ -10,14 +10,6 @@ from collections import namedtuple
 
 from albertv0 import *
 
-Window = namedtuple('Window', [
-    'wid',
-    'desktop',
-    'wm_class',
-    'host',
-    'wm_name'
-])
-
 __iid__ = 'PythonInterface/v0.1'
 __prettyname__ = 'Spotlight'
 __version__ = '1.0'
@@ -27,8 +19,16 @@ __dependencies__ = ['wmctrl']
 if which('wmctrl') is None:
     raise Exception('"wmctrl" is not in $PATH.')
 
+Window = namedtuple('Window', [
+    'wid',
+    'desktop',
+    'wm_class',
+    'host',
+    'wm_name'
+])
 
-def getWindowTitle(name: str):
+
+def getWindowTitle(name: str) -> str:
     names = {
         'Vlc': 'VLC Media Player',
         'Code': 'Visual Studio Code',
@@ -36,10 +36,10 @@ def getWindowTitle(name: str):
 
     sanitizedTitle = name.title().split('.')[-1].replace('-', ' ')
 
-    return names.get(sanitizedTitle, sanitizedTitle)
+    return f'<i>{names.get(sanitizedTitle, sanitizedTitle)}</i>'
 
 
-def getWindowIcon(win_code: str):
+def getWindowIcon(win_code: str) -> str:
     icons = {
         'code': 'com.visualstudio.code',
         'gnome-terminal-server': 'org.gnome.Terminal',
