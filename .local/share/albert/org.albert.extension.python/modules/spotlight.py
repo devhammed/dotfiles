@@ -36,11 +36,12 @@ def getWindowTitle(name: str) -> str:
 
     sanitizedTitle = name.title().split('.')[-1].replace('-', ' ')
 
-    return f'<i>{names.get(sanitizedTitle, sanitizedTitle)}</i>'
+    return names.get(sanitizedTitle, sanitizedTitle)
 
 
 def getWindowIcon(win_code: str) -> str:
     icons = {
+        'spotify': 'spotify-client',
         'code': 'com.visualstudio.code',
         'gnome-terminal-server': 'org.gnome.Terminal',
     }
