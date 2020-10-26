@@ -66,11 +66,11 @@ def handleQuery(query):
                     actions=[
                         ProcAction(
                             'Switch Window',
-                            ['wmctrl', '-i', '-a', win.wid]
+                            ['wmctrl', '-i', '-a', win.wid],
                         ),
                         ProcAction(
                             'Close the window gracefully.',
-                            ['wmctrl', '-c', win.wid]
+                            ['wmctrl', '-c', win.wid],
                         ),
                     ],
                 ),
