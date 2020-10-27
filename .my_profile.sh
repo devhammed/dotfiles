@@ -6,6 +6,7 @@ export LANG='en_NG.UTF-8'
 
 # Fix QT DPI issue
 export QT_FONT_DPI=96
+export QT_SCALE_FACTOR=1
 
 # Load User Binaries Environment
 export PATH="$HOME/.local/bin:$PATH"
