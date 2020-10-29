@@ -18,12 +18,16 @@ fi
 
 # Install Brew packages
 if [ -f "$HOME/.Brewfile" ]; then
-  echo "Updating homebrew bundle..."
+  echo "Updating Homebrew Bundle..."
   brew bundle --global
 fi
 
-# Install NPM Packages
-npm install -g vercel git-dld tldr standard live-server
+# Install Global NPM Packages
+if is_not_installed vercel; then
+  echo "Installing Global NPM Packages..."
+
+  npm install -g vercel @angular/cli @vue/cli-service-global @vue/cli artillery bash-language-server caniuse-cmd bundle-phobia-cli degit firebase-tools git-dld tldr standard live-server insomnia-documenter parcel-bundler prettier-standard sass tldr typescript
+fi
 
 # Install DENO
 if is_not_installed deno; then
@@ -38,7 +42,7 @@ if is_not_installed flutter; then
   echo "Installing Flutter..."
   export FLUTTER_SDK_PATH="$HOME/Tools/flutter/bin"
   mkdir -p $FLUTTER_SDK_PATH
-  git clone https://github.com/flutter/flutter.git -b beta $FLUTTER_SDK_PATH
+  git clone https://github.com/flutter/flutter.git -b stable $FLUTTER_SDK_PATH
 fi
 
 # Install Rustup
