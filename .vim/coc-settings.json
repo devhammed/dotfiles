@@ -5,7 +5,9 @@
     "javascript",
     "python",
     "json",
-    "vala"
+    "vala",
+    "typescript",
+    "typescriptreact"
   ],
   "prettier.semi": false,
   "prettier.trailingComma": "none",

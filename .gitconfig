@@ -5,6 +5,7 @@
 	username = devhammed
 [init]
 	templateDir = ~/.git-template
+	defaultBranch = main
 [commit]
 	gpgsign = true
 [gpg]
