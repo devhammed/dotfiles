@@ -72,6 +72,19 @@ if is_not_installed starship; then
   curl -fsSL https://starship.rs/install.sh | bash
 fi
 
+# Install Albert Launcher
+if is_not_installed albert; then
+  curl https://build.opensuse.org/projects/home:manuelschneid3r/public_key | sudo apt-key add - && \
+
+  echo 'deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /' | sudo tee /etc/apt/sources.list.d/home:manuelschneid3r.list && \
+
+  sudo wget -nv https://download.opensuse.org/repositories/home:manuelschneid3r/xUbuntu_20.04/Release.key -O "/etc/apt/trusted.gpg.d/home:manuelschneid3r.asc" && \
+
+  sudo apt update && \
+  
+  sudo apt install albert
+fi
+
 # Install ZSH Plugins
 ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 ZSH_CUSTOM_PLUGINS="$ZSH_CUSTOM/plugins"
