@@ -39,7 +39,13 @@ QListView {
 }
 
 QListView::item:selected {
-  background: qlineargradient(x1:0, x2:1, stop:0.0 #44475a, stop:0.5 #44475a, stop:1.0 #44475a);
+  background: qlineargradient(
+    x1: 0,
+    x2: 1,
+    stop: 0 #44475a,
+    stop: 0.5 #44475a,
+    stop: 1 #44475a
+  );
 }
 
 QListView QScrollBar:vertical {
@@ -52,9 +58,12 @@ QListView QScrollBar::handle:vertical {
   min-height: 24px;
 }
 
-QListView QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical,
-QListView QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical,
-QListView QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+QListView QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical,
+QListView QScrollBar::up-arrow:vertical,
+QScrollBar::down-arrow:vertical,
+QListView QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical {
   border: 0px;
   width: 0px;
   height: 0px;
