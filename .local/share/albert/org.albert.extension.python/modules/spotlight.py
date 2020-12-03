@@ -43,6 +43,7 @@ def getWindowIcon(win_code: str) -> str:
     icons = {
         'spotify': 'spotify-client',
         'code': 'com.visualstudio.code',
+        'org': 'org.gnome.Nautilus',
         'gnome-terminal-server': 'org.gnome.Terminal',
     }
 

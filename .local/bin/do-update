@@ -35,6 +35,6 @@ sudo apt update || true && \
 
 # Update Completions
 echo "Updating ZSH Completions..."
-deno completions zsh > "$HOME/.zsh_completions/_deno"
 gh completion -s zsh > "$HOME/.zsh_completions/_gh"
+deno completions zsh > "$HOME/.zsh_completions/_deno"
  
