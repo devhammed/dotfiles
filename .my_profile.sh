@@ -78,6 +78,7 @@ export BROWSER="google-chrome"
 export PYTHONDONTWRITEBYTECODE="off"
 
 # Custom Aliases
+alias rm='rm -i'
 alias kgif='mkgif 30 720 0:00 0'
 alias la='ls -la'
 alias xdg='xdg-open'
@@ -90,6 +91,7 @@ alias cat='bat'
 alias usudo='sudo -E env "PATH=$PATH"'
 alias fsize='du -sh'
 alias betty="$HOME/Tools/betty/main.rb"
+alias create-react-app='create-react-app --use-npm'
 alias create-wp-app='composer create-project --prefer-dist wordplate/wordplate'
 alias create-laravel-app='composer create-project --prefer-dist laravel/laravel'
 
