@@ -23,6 +23,14 @@ export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbi
 export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
 export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:${INFOPATH:-}";
 
+# Load Brew Completion
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
 # Load Deno Environment
 export DENO_INSTALL_ROOT="$HOME/Tools/deno"
 export PATH="$DENO_INSTALL_ROOT/bin:$PATH"
@@ -40,6 +48,8 @@ export GO111MODULE=on
 export GOPATH="$HOME/Tools/go"
 export PATH="$GOPATH/bin:$PATH"
 export GOSRC="$GOPATH/src/github.com/$USER"
+
+# Load Go Workspace
 if [[ ! -d "$GOSRC" ]]; then
   mkdir -p "$GOSRC"
 fi
@@ -65,9 +75,6 @@ export PATH="$HOME/Tools/ballerina/bin:$PATH"
 # Load Node.js extra CA Certificates
 export NODE_EXTRA_CA_CERTS="$(mkcert -CAROOT)/rootCA.pem"
 
-# Load PPSSPP Environment
-export PATH="$HOME/Downloads/psp:$PATH"
-
 # Set CLI Editor
 export EDITOR="vim"
 
@@ -90,7 +97,6 @@ alias backup='rsync -rtvu'
 alias cat='bat'
 alias usudo='sudo -E env "PATH=$PATH"'
 alias fsize='du -sh'
-alias betty="$HOME/Tools/betty/main.rb"
 alias create-react-app='create-react-app --use-npm'
 alias create-wp-app='composer create-project --prefer-dist wordplate/wordplate'
 alias create-laravel-app='composer create-project --prefer-dist laravel/laravel'

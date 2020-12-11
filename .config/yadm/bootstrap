@@ -19,7 +19,7 @@ fi
 # Install Brew packages
 if [ -f "$HOME/.Brewfile" ]; then
   echo "Updating Homebrew Bundle..."
-  brew bundle --global
+  brew bundle install
 fi
 
 # Install Global NPM Packages
