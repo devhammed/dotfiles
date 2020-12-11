@@ -15,13 +15,13 @@ export PATH="$HOME/.local/bin:$PATH"
 fpath+="$HOME/.zsh_completions"
 
 # Load Homebrew Environment
-export HOMEBREW_PREFIX="/home/devhammed/.linuxbrew";
-export HOMEBREW_CELLAR="/home/devhammed/.linuxbrew/Cellar";
-export HOMEBREW_REPOSITORY="/home/devhammed/.linuxbrew/Homebrew";
-export PATH="$PATH:$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin";
-export MANPATH="/home/devhammed/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
-export INFOPATH="/home/devhammed/.linuxbrew/share/info${INFOPATH+:$INFOPATH}";
-fpath+="$HOME/.linuxbrew/share/zsh/site-functions"
+export HOMEBREW_BUNDLE_FILE="$HOME/.Brewfile"
+export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
+export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
+export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew";
+export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin";
+export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
+export INFOPATH="/home/linuxbrew/.linuxbrew/share/info:${INFOPATH:-}";
 
 # Load Deno Environment
 export DENO_INSTALL_ROOT="$HOME/Tools/deno"
