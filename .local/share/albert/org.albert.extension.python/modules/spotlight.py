@@ -10,7 +10,6 @@ from collections import namedtuple
 
 from albert import *
 
-__triggers__ = ''
 __version__ = '0.4.0'
 __title__ = 'Spotlight'
 __exec_deps__ = ['wmctrl']
