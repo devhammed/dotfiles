@@ -4,18 +4,18 @@
 
 import os
 import subprocess
-from albertv0 import *
+from albert import *
 
-__iid__ = 'PythonInterface/v0.1'
-__prettyname__ = 'Time Since'
-__version__ = '1.0'
-__trigger__ = 'since '
-__author__ = 'Hammed Oyedele'
-__dependencies__ = ['since']
+__version__ = '0.4.0'
+__triggers__ = 'since '
+__title__ = 'Time Since'
+__exec_deps__ = ['since']
+__authors__ = 'Hammed Oyedele'
+
 
 def handleQuery(query):
     if query.isTriggered:
-        item = Item(id=__prettyname__, icon=iconLookup('emblem-urgent'))
+        item = Item(id=__title__, icon=iconLookup('emblem-urgent'))
         stripped = query.string.strip()
 
         if stripped == '':

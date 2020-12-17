@@ -8,16 +8,13 @@ import subprocess
 from shutil import which
 from collections import namedtuple
 
-from albertv0 import *
+from albert import *
 
-__iid__ = 'PythonInterface/v0.1'
-__prettyname__ = 'Spotlight'
-__version__ = '1.0'
-__author__ = 'Hammed Oyedele'
-__dependencies__ = ['wmctrl']
-
-if which('wmctrl') is None:
-    raise Exception('"wmctrl" is not in $PATH.')
+__triggers__ = ''
+__version__ = '0.4.0'
+__title__ = 'Spotlight'
+__exec_deps__ = ['wmctrl']
+__authors__ = 'Hammed Oyedele'
 
 Window = namedtuple('Window', [
     'wid',
@@ -61,7 +58,7 @@ def handleQuery(query):
         if win.wm_name != 'albert — Albert' and win.desktop != '-1' and stripped in win_code.lower():
             results.append(
                 Item(
-                    id=f'{__prettyname__}_{win.wm_class}',
+                    id=f'{__title__}_{win.wm_class}',
                     icon=getWindowIcon(win_code),
                     text=getWindowTitle(win.wm_class),
                     subtext=win.wm_name,
