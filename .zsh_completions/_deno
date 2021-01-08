@@ -370,6 +370,7 @@ _arguments "${_arguments_options[@]}" \
 '--v8-flags=[Set V8 command line options (for help: --v8-flags=--help)]' \
 '--seed=[Seed Math.random()]' \
 '--filter=[Run tests with this string or pattern in the test name]' \
+'(--inspect --inspect-brk)--coverage=[Collect coverage information]' \
 '-L+[Set log level]: :(debug info)' \
 '--log-level=[Set log level]: :(debug info)' \
 '--no-remote[Do not resolve remote modules]' \
@@ -385,7 +386,6 @@ _arguments "${_arguments_options[@]}" \
 '--no-run[Cache test modules, but don'\''t run tests]' \
 '--fail-fast[Stop on first error]' \
 '--allow-none[Don'\''t return error code if no test files are found]' \
-'(--inspect --inspect-brk)--coverage[Collect coverage information]' \
 '-h[Prints help information]' \
 '--help[Prints help information]' \
 '-V[Prints version information]' \

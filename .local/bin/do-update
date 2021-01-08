@@ -17,8 +17,6 @@ sudo apt update || true && \
   sudo apt clean || true && \
   sudo apt autoremove || true && \
   sudo gem update || true && \
-  ballerina update || true && \
-  ballerina dist update || true && \
   snap refresh || true && \
   brew upgrade || true && \
   brew cleanup || true && \
