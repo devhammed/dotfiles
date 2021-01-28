@@ -92,13 +92,28 @@ _arguments "${_arguments_options[@]}" \
 '--reload=[Reload source code cache (recompile TypeScript)]' \
 '--lock=[Check the specified lock file]' \
 '--cert=[Load certificate authority from PEM encoded file]' \
+'--allow-read=[Allow file system read access]' \
+'--allow-write=[Allow file system write access]' \
+'--allow-net=[Allow network access]' \
+'--location=[Value of '\''globalThis.location'\'' used by some web APIs]' \
+'--v8-flags=[Set V8 command line options (for help: --v8-flags=--help)]' \
+'--seed=[Seed Math.random()]' \
 '-o+[Output file (defaults to $PWD/<inferred-name>)]' \
 '--output=[Output file (defaults to $PWD/<inferred-name>)]' \
+'--target=[Target OS architecture]: :(x86_64-unknown-linux-gnu x86_64-pc-windows-msvc x86_64-apple-darwin aarch64-apple-darwin)' \
 '-L+[Set log level]: :(debug info)' \
 '--log-level=[Set log level]: :(debug info)' \
 '--no-remote[Do not resolve remote modules]' \
 '--no-check[Skip type checking modules]' \
 '--lock-write[Write lock file (use with --lock)]' \
+'--allow-env[Allow environment access]' \
+'--allow-run[Allow running subprocesses]' \
+'--allow-plugin[Allow loading plugins]' \
+'--allow-hrtime[Allow high resolution time measurement]' \
+'-A[Allow all permissions]' \
+'--allow-all[Allow all permissions]' \
+'--cached-only[Require that remote dependencies are already cached]' \
+'--lite[Use lite runtime]' \
 '-h[Prints help information]' \
 '--help[Prints help information]' \
 '-V[Prints version information]' \
@@ -106,7 +121,7 @@ _arguments "${_arguments_options[@]}" \
 '--unstable[Enable unstable features and APIs]' \
 '-q[Suppress diagnostic output]' \
 '--quiet[Suppress diagnostic output]' \
-':source_file:_files' \
+':script_arg -- Script arg:_files' \
 && ret=0
 ;;
 (completions)
@@ -154,6 +169,7 @@ _arguments "${_arguments_options[@]}" \
 '--cert=[Load certificate authority from PEM encoded file]' \
 '--inspect=[activate inspector on host:port (default: 127.0.0.1:9229)]' \
 '--inspect-brk=[activate inspector on host:port and break at start of user script]' \
+'--location=[Value of '\''globalThis.location'\'' used by some web APIs]' \
 '--v8-flags=[Set V8 command line options (for help: --v8-flags=--help)]' \
 '--seed=[Seed Math.random()]' \
 '-L+[Set log level]: :(debug info)' \
@@ -178,6 +194,7 @@ _arguments "${_arguments_options[@]}" \
 ;;
 (fmt)
 _arguments "${_arguments_options[@]}" \
+'--ext=[Set standard input (stdin) content type]: :(ts tsx js jsx md)' \
 '--ignore=[Ignore formatting particular source files. Use with --unstable]' \
 '-L+[Set log level]: :(debug info)' \
 '--log-level=[Set log level]: :(debug info)' \
@@ -222,11 +239,12 @@ _arguments "${_arguments_options[@]}" \
 '--reload=[Reload source code cache (recompile TypeScript)]' \
 '--lock=[Check the specified lock file]' \
 '--cert=[Load certificate authority from PEM encoded file]' \
-'--inspect=[activate inspector on host:port (default: 127.0.0.1:9229)]' \
-'--inspect-brk=[activate inspector on host:port and break at start of user script]' \
 '--allow-read=[Allow file system read access]' \
 '--allow-write=[Allow file system write access]' \
 '--allow-net=[Allow network access]' \
+'--inspect=[activate inspector on host:port (default: 127.0.0.1:9229)]' \
+'--inspect-brk=[activate inspector on host:port and break at start of user script]' \
+'--location=[Value of '\''globalThis.location'\'' used by some web APIs]' \
 '--v8-flags=[Set V8 command line options (for help: --v8-flags=--help)]' \
 '--seed=[Seed Math.random()]' \
 '-n+[Executable file name]' \
@@ -297,6 +315,7 @@ _arguments "${_arguments_options[@]}" \
 '--cert=[Load certificate authority from PEM encoded file]' \
 '--inspect=[activate inspector on host:port (default: 127.0.0.1:9229)]' \
 '--inspect-brk=[activate inspector on host:port and break at start of user script]' \
+'--location=[Value of '\''globalThis.location'\'' used by some web APIs]' \
 '--v8-flags=[Set V8 command line options (for help: --v8-flags=--help)]' \
 '--seed=[Seed Math.random()]' \
 '-L+[Set log level]: :(debug info)' \
@@ -323,11 +342,12 @@ _arguments "${_arguments_options[@]}" \
 '--reload=[Reload source code cache (recompile TypeScript)]' \
 '--lock=[Check the specified lock file]' \
 '--cert=[Load certificate authority from PEM encoded file]' \
-'--inspect=[activate inspector on host:port (default: 127.0.0.1:9229)]' \
-'--inspect-brk=[activate inspector on host:port and break at start of user script]' \
 '--allow-read=[Allow file system read access]' \
 '--allow-write=[Allow file system write access]' \
 '--allow-net=[Allow network access]' \
+'--inspect=[activate inspector on host:port (default: 127.0.0.1:9229)]' \
+'--inspect-brk=[activate inspector on host:port and break at start of user script]' \
+'--location=[Value of '\''globalThis.location'\'' used by some web APIs]' \
 '--v8-flags=[Set V8 command line options (for help: --v8-flags=--help)]' \
 '--seed=[Seed Math.random()]' \
 '-L+[Set log level]: :(debug info)' \
@@ -362,11 +382,12 @@ _arguments "${_arguments_options[@]}" \
 '--reload=[Reload source code cache (recompile TypeScript)]' \
 '--lock=[Check the specified lock file]' \
 '--cert=[Load certificate authority from PEM encoded file]' \
-'--inspect=[activate inspector on host:port (default: 127.0.0.1:9229)]' \
-'--inspect-brk=[activate inspector on host:port and break at start of user script]' \
 '--allow-read=[Allow file system read access]' \
 '--allow-write=[Allow file system write access]' \
 '--allow-net=[Allow network access]' \
+'--inspect=[activate inspector on host:port (default: 127.0.0.1:9229)]' \
+'--inspect-brk=[activate inspector on host:port and break at start of user script]' \
+'--location=[Value of '\''globalThis.location'\'' used by some web APIs]' \
 '--v8-flags=[Set V8 command line options (for help: --v8-flags=--help)]' \
 '--seed=[Seed Math.random()]' \
 '--filter=[Run tests with this string or pattern in the test name]' \
