@@ -41,7 +41,7 @@ export COMPOSER_ALLOW_XDEBUG=1
 export COMPOSER_DISABLE_XDEBUG_WARN=1
 
 # Load Go Environment
-export GO111MODULE=on
+export GO111MODULE=auto
 export GOPATH="$HOME/Tools/go"
 export PATH="$GOPATH/bin:$PATH"
 export GOSRC="$GOPATH/src/github.com/$USER"

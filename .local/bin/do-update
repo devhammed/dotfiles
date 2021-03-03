@@ -14,6 +14,7 @@ fi
 echo "Updating Binaries..."
 sudo apt update || true && \
   sudo apt upgrade -y || true && \
+  sudo mv "$HOME/.google-chrome.desktop" "/usr/share/applications/google-chrome.desktop" || true && \
   sudo apt clean || true && \
   sudo apt autoremove || true && \
   sudo gem update || true && \
