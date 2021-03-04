@@ -35,7 +35,7 @@ _deno() {
         case $line[1] in
             (bundle)
 _arguments "${_arguments_options[@]}" \
-'--import-map=[UNSTABLE: Load import map file]' \
+'--import-map=[Load import map file]' \
 '-c+[Load tsconfig.json configuration file]' \
 '--config=[Load tsconfig.json configuration file]' \
 '-r+[Reload source code cache (recompile TypeScript)]' \
@@ -61,7 +61,7 @@ _arguments "${_arguments_options[@]}" \
 ;;
 (cache)
 _arguments "${_arguments_options[@]}" \
-'--import-map=[UNSTABLE: Load import map file]' \
+'--import-map=[Load import map file]' \
 '-c+[Load tsconfig.json configuration file]' \
 '--config=[Load tsconfig.json configuration file]' \
 '-r+[Reload source code cache (recompile TypeScript)]' \
@@ -85,7 +85,7 @@ _arguments "${_arguments_options[@]}" \
 ;;
 (compile)
 _arguments "${_arguments_options[@]}" \
-'--import-map=[UNSTABLE: Load import map file]' \
+'--import-map=[Load import map file]' \
 '-c+[Load tsconfig.json configuration file]' \
 '--config=[Load tsconfig.json configuration file]' \
 '-r+[Reload source code cache (recompile TypeScript)]' \
@@ -138,9 +138,27 @@ _arguments "${_arguments_options[@]}" \
 ':shell:(zsh bash fish powershell elvish)' \
 && ret=0
 ;;
+(coverage)
+_arguments "${_arguments_options[@]}" \
+'--ignore=[Ignore coverage files]' \
+'*--include=[Include source files in the report]' \
+'*--exclude=[Exclude source files from the report]' \
+'-L+[Set log level]: :(debug info)' \
+'--log-level=[Set log level]: :(debug info)' \
+'--lcov[Output coverage report in lcov format]' \
+'-h[Prints help information]' \
+'--help[Prints help information]' \
+'-V[Prints version information]' \
+'--version[Prints version information]' \
+'--unstable[Enable unstable features and APIs]' \
+'-q[Suppress diagnostic output]' \
+'--quiet[Suppress diagnostic output]' \
+':files:_files' \
+&& ret=0
+;;
 (doc)
 _arguments "${_arguments_options[@]}" \
-'--import-map=[UNSTABLE: Load import map file]' \
+'--import-map=[Load import map file]' \
 '-r+[Reload source code cache (recompile TypeScript)]' \
 '--reload=[Reload source code cache (recompile TypeScript)]' \
 '-L+[Set log level]: :(debug info)' \
@@ -160,18 +178,19 @@ _arguments "${_arguments_options[@]}" \
 ;;
 (eval)
 _arguments "${_arguments_options[@]}" \
-'--import-map=[UNSTABLE: Load import map file]' \
+'--import-map=[Load import map file]' \
 '-c+[Load tsconfig.json configuration file]' \
 '--config=[Load tsconfig.json configuration file]' \
 '-r+[Reload source code cache (recompile TypeScript)]' \
 '--reload=[Reload source code cache (recompile TypeScript)]' \
 '--lock=[Check the specified lock file]' \
 '--cert=[Load certificate authority from PEM encoded file]' \
-'--inspect=[activate inspector on host:port (default: 127.0.0.1:9229)]' \
-'--inspect-brk=[activate inspector on host:port and break at start of user script]' \
+'--inspect=[Activate inspector on host:port (default: 127.0.0.1:9229)]' \
+'--inspect-brk=[Activate inspector on host:port and break at start of user script]' \
 '--location=[Value of '\''globalThis.location'\'' used by some web APIs]' \
 '--v8-flags=[Set V8 command line options (for help: --v8-flags=--help)]' \
 '--seed=[Seed Math.random()]' \
+'--ext=[Set standard input (stdin) content type]: :(ts tsx js jsx)' \
 '-L+[Set log level]: :(debug info)' \
 '--log-level=[Set log level]: :(debug info)' \
 '--no-remote[Do not resolve remote modules]' \
@@ -194,7 +213,7 @@ _arguments "${_arguments_options[@]}" \
 ;;
 (fmt)
 _arguments "${_arguments_options[@]}" \
-'--ext=[Set standard input (stdin) content type]: :(ts tsx js jsx md)' \
+'--ext=[Set standard input (stdin) content type]: :(ts tsx js jsx md json jsonc)' \
 '--ignore=[Ignore formatting particular source files. Use with --unstable]' \
 '-L+[Set log level]: :(debug info)' \
 '--log-level=[Set log level]: :(debug info)' \
@@ -215,7 +234,7 @@ _arguments "${_arguments_options[@]}" \
 '-r+[Reload source code cache (recompile TypeScript)]' \
 '--reload=[Reload source code cache (recompile TypeScript)]' \
 '--cert=[Load certificate authority from PEM encoded file]' \
-'--import-map=[UNSTABLE: Load import map file]' \
+'--import-map=[Load import map file]' \
 '-L+[Set log level]: :(debug info)' \
 '--log-level=[Set log level]: :(debug info)' \
 '--no-check[Skip type checking modules]' \
@@ -232,7 +251,7 @@ _arguments "${_arguments_options[@]}" \
 ;;
 (install)
 _arguments "${_arguments_options[@]}" \
-'--import-map=[UNSTABLE: Load import map file]' \
+'--import-map=[Load import map file]' \
 '-c+[Load tsconfig.json configuration file]' \
 '--config=[Load tsconfig.json configuration file]' \
 '-r+[Reload source code cache (recompile TypeScript)]' \
@@ -242,8 +261,8 @@ _arguments "${_arguments_options[@]}" \
 '--allow-read=[Allow file system read access]' \
 '--allow-write=[Allow file system write access]' \
 '--allow-net=[Allow network access]' \
-'--inspect=[activate inspector on host:port (default: 127.0.0.1:9229)]' \
-'--inspect-brk=[activate inspector on host:port and break at start of user script]' \
+'--inspect=[Activate inspector on host:port (default: 127.0.0.1:9229)]' \
+'--inspect-brk=[Activate inspector on host:port and break at start of user script]' \
 '--location=[Value of '\''globalThis.location'\'' used by some web APIs]' \
 '--v8-flags=[Set V8 command line options (for help: --v8-flags=--help)]' \
 '--seed=[Seed Math.random()]' \
@@ -306,15 +325,15 @@ _arguments "${_arguments_options[@]}" \
 ;;
 (repl)
 _arguments "${_arguments_options[@]}" \
-'--import-map=[UNSTABLE: Load import map file]' \
+'--import-map=[Load import map file]' \
 '-c+[Load tsconfig.json configuration file]' \
 '--config=[Load tsconfig.json configuration file]' \
 '-r+[Reload source code cache (recompile TypeScript)]' \
 '--reload=[Reload source code cache (recompile TypeScript)]' \
 '--lock=[Check the specified lock file]' \
 '--cert=[Load certificate authority from PEM encoded file]' \
-'--inspect=[activate inspector on host:port (default: 127.0.0.1:9229)]' \
-'--inspect-brk=[activate inspector on host:port and break at start of user script]' \
+'--inspect=[Activate inspector on host:port (default: 127.0.0.1:9229)]' \
+'--inspect-brk=[Activate inspector on host:port and break at start of user script]' \
 '--location=[Value of '\''globalThis.location'\'' used by some web APIs]' \
 '--v8-flags=[Set V8 command line options (for help: --v8-flags=--help)]' \
 '--seed=[Seed Math.random()]' \
@@ -335,7 +354,7 @@ _arguments "${_arguments_options[@]}" \
 ;;
 (run)
 _arguments "${_arguments_options[@]}" \
-'--import-map=[UNSTABLE: Load import map file]' \
+'--import-map=[Load import map file]' \
 '-c+[Load tsconfig.json configuration file]' \
 '--config=[Load tsconfig.json configuration file]' \
 '-r+[Reload source code cache (recompile TypeScript)]' \
@@ -345,8 +364,8 @@ _arguments "${_arguments_options[@]}" \
 '--allow-read=[Allow file system read access]' \
 '--allow-write=[Allow file system write access]' \
 '--allow-net=[Allow network access]' \
-'--inspect=[activate inspector on host:port (default: 127.0.0.1:9229)]' \
-'--inspect-brk=[activate inspector on host:port and break at start of user script]' \
+'--inspect=[Activate inspector on host:port (default: 127.0.0.1:9229)]' \
+'--inspect-brk=[Activate inspector on host:port and break at start of user script]' \
 '--location=[Value of '\''globalThis.location'\'' used by some web APIs]' \
 '--v8-flags=[Set V8 command line options (for help: --v8-flags=--help)]' \
 '--seed=[Seed Math.random()]' \
@@ -375,7 +394,7 @@ _arguments "${_arguments_options[@]}" \
 ;;
 (test)
 _arguments "${_arguments_options[@]}" \
-'--import-map=[UNSTABLE: Load import map file]' \
+'--import-map=[Load import map file]' \
 '-c+[Load tsconfig.json configuration file]' \
 '--config=[Load tsconfig.json configuration file]' \
 '-r+[Reload source code cache (recompile TypeScript)]' \
@@ -385,13 +404,13 @@ _arguments "${_arguments_options[@]}" \
 '--allow-read=[Allow file system read access]' \
 '--allow-write=[Allow file system write access]' \
 '--allow-net=[Allow network access]' \
-'--inspect=[activate inspector on host:port (default: 127.0.0.1:9229)]' \
-'--inspect-brk=[activate inspector on host:port and break at start of user script]' \
+'--inspect=[Activate inspector on host:port (default: 127.0.0.1:9229)]' \
+'--inspect-brk=[Activate inspector on host:port and break at start of user script]' \
 '--location=[Value of '\''globalThis.location'\'' used by some web APIs]' \
 '--v8-flags=[Set V8 command line options (for help: --v8-flags=--help)]' \
 '--seed=[Seed Math.random()]' \
 '--filter=[Run tests with this string or pattern in the test name]' \
-'(--inspect --inspect-brk)--coverage=[Collect coverage information]' \
+'(--inspect --inspect-brk)--coverage=[Collect coverage profile data]' \
 '-L+[Set log level]: :(debug info)' \
 '--log-level=[Set log level]: :(debug info)' \
 '--no-remote[Do not resolve remote modules]' \
@@ -474,6 +493,7 @@ _deno_commands() {
 "cache:Cache the dependencies" \
 "compile:Compile the script into a self contained executable" \
 "completions:Generate shell completions" \
+"coverage:Print coverage reports" \
 "doc:Show documentation for a module" \
 "eval:Eval script" \
 "fmt:Format source files" \
@@ -517,6 +537,13 @@ _deno__completions_commands() {
         
     )
     _describe -t commands 'deno completions commands' commands "$@"
+}
+(( $+functions[_deno__coverage_commands] )) ||
+_deno__coverage_commands() {
+    local commands; commands=(
+        
+    )
+    _describe -t commands 'deno coverage commands' commands "$@"
 }
 (( $+functions[_deno__doc_commands] )) ||
 _deno__doc_commands() {
