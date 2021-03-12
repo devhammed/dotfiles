@@ -41,7 +41,10 @@ export COMPOSER_ALLOW_XDEBUG=1
 export COMPOSER_DISABLE_XDEBUG_WARN=1
 
 # Load Go Environment
-export PATH="$HOME/Tools/go/bin:$PATH"
+export GOPATH="$HOME/Tools/go"
+export PATH="$GOPATH/bin:$PATH"
+export GOSRC="$GOPATH/src/github.com/$USER"
+[[ ! -d "$GOSRC" ]] && mkdir -p "$GOSRC"
 
 # Load Rust Environment
 source $HOME/.cargo/env
