@@ -23,6 +23,11 @@
       "command": "vala-language-server",
       "filetypes": ["vala", "genie"]
     },
+    "mint": {
+      "command": "mint",
+      "args": ["ls"],
+      "filetypes": ["mint"]
+    },
     "bash": {
       "command": "bash-language-server",
       "args": ["start"],

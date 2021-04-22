@@ -220,3 +220,6 @@ autocmd BufEnter *.php setlocal shiftwidth=4 tabstop=4 softtabstop=4
 
 " Set nonumber and disable mouse for .crt and .key files
 autocmd BufEnter *.key,*.crt setlocal nonumber mouse=
+
+" Add mint file type
+autocmd BufNewFile,BufRead *.mint set filetype=mint
