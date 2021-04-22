@@ -26,7 +26,7 @@ fi
 if is_not_installed vercel; then
   echo "Installing Global NPM Packages..."
 
-  npm install -g @angular/cli @svgr/cli bash-language-server caniuse-cmd firebase-tools live-server prettier-standard standard typescript vercel
+  npm install -g @angular/cli @svgr/cli bash-language-server caniuse-cmd firebase-tools live-server prettier-standard standard typescript vercel parcel
 fi
 
 # Install DENO
