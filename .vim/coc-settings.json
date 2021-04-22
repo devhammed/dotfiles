@@ -26,7 +26,8 @@
     "mint": {
       "command": "mint",
       "args": ["ls"],
-      "filetypes": ["mint"]
+      "filetypes": ["mint"],
+      "rootPatterns": ["mint.json"]
     },
     "bash": {
       "command": "bash-language-server",
