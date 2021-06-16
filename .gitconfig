@@ -23,4 +23,6 @@
 [tag]
 	forceSignAnnotated = true
 [pull]
-	rebase = false
+  rebase = false
+[includeIf "gitdir:~/Projects/"]
+  path = ~/.gitconfig-projects
