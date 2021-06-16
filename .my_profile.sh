@@ -105,5 +105,9 @@ gi() {
 
 
 dockerps() {
-  docker ps "$@" --format="ID\\t{{.ID}}\nName\\t{{.Names}}\nImage\\t{{.Image}}\nPorts\\t{{.Ports}}\nCommand\\t{{.Command}}\nCreated\\t{{.CreatedAt}}\nStatus\\t{{.Status}}\n"
+  docker ps "$@" --format="ID\\t: {{.ID}}\nName\\t: {{.Names}}\nImage\\t: {{.Image}}\nPorts\\t: {{.Ports}}\nCommand\\t: {{.Command}}\nCreated\\t: {{.CreatedAt}}\nStatus\\t: {{.Status}}\n"
+}
+
+git-release() {
+   git tag "$@" && git push --tags
 }

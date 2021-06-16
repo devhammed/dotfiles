@@ -4,7 +4,6 @@
 	signingkey = B8E2CB30A8D8071C
 	username = devhammed
 [init]
-	templateDir = ~/.git-template
 	defaultBranch = main
 [commit]
 	gpgsign = true
@@ -14,13 +13,13 @@
 	unstage = reset --
 	remove-untracked = clean -d -x -f
 	sweep = !git fetch -p && git branch -d $(git branch --merged | grep -v main)
-	branches = branch -a
+  branches = branch -a
 	down = !git checkout master && git pull && git sweep
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+  process = git-lfs filter-process
 [tag]
 	forceSignAnnotated = true
 [pull]

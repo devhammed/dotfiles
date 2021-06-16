@@ -80,6 +80,7 @@ plugins=(
   flutter
   artisan
   minikube
+  wakatime
   zsh-completions
   zsh-autosuggestions
   git-flow-completion
