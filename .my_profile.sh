@@ -14,6 +14,9 @@ export PATH="$HOME/.local/bin:$PATH"
 # Load Custom ZSH Completions
 fpath+="$HOME/.zsh_completions"
 
+# Load Snapcraft Environment
+export SNAPCRAFT_BUILD_ENVIRONMENT=lxd
+
 # Load Homebrew Environment
 export HOMEBREW_BUNDLE_FILE="$HOME/.Brewfile"
 export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";

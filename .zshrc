@@ -121,3 +121,5 @@ eval "$(thefuck --alias f)"
 
 # Load Starship Prompt
 eval "$(starship init zsh)"
+fpath=(~/.ballerina/completion $fpath)
+autoload -U compinit && compinit
