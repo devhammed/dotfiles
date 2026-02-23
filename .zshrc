@@ -87,5 +87,3 @@ eval "$(zoxide init zsh)"
 
 # Load Starship Prompt
 eval "$(starship init zsh)"
-
-
