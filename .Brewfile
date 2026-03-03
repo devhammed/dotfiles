@@ -1,6 +1,7 @@
 tap "oven-sh/bun"
 brew "bat"
 brew "direnv"
+brew "f2"
 brew "ffmpeg"
 brew "gh"
 brew "git"
