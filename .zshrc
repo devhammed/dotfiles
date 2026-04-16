@@ -55,6 +55,9 @@ export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/emulator:$ANDR
 # Ruby
 export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/4.0.0/bin:$PATH"
 
+# Cargo
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Composer
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
