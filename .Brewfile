@@ -30,6 +30,8 @@ brew "k6"
 brew "mailpit"
 # Open source relational database management system
 brew "mysql@8.4", link: true
+# HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
+brew "nginx"
 # Libraries for security-enabled client and server applications
 brew "nss"
 # HTTP load generator, inspired by rakyll/hey with tui animation
