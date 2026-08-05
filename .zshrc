@@ -44,7 +44,7 @@ export LDFLAGS="-L/usr/local/opt/ruby/lib"
 export CPPFLAGS="-I/usr/local/opt/ruby/include -I/usr/local/opt/openjdk/include"
 export LANG=en_US.UTF-8
 export EDITOR="vim"
-export VISUAL="phpstorm"
+export VISUAL="vim"
 export BROWSER="google-chrome"
 export DIRENV_LOG_FORMAT=""
 
@@ -61,33 +61,11 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Composer
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
-# Herd injected NVM configuration
-export NVM_DIR="$HOME/Library/Application Support/Herd/config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-[[ -f "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh" ]] && builtin source "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh"
-
-# Herd injected PHP binary.
-export PATH="$HOME/Library/Application Support/Herd/bin:$PATH"
-
-# Herd injected PHP 8.2 configuration.
-export HERD_PHP_82_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/82/"
-
-# Herd injected PHP 8.3 configuration.
-export HERD_PHP_83_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/83/"
-
-# Herd injected PHP 8.4 configuration.
-export HERD_PHP_84_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/84/"
-
-# Herd injected PHP 8.5 configuration.
-export HERD_PHP_85_INI_SCAN_DIR="$HOME/Library/Application Support/Herd/config/php/85/"
-
-# Herd CA for Node.js
-export NODE_EXTRA_CA_CERTS="$HOME/Library/Application Support/Herd/config/valet/CA/LaravelValetCASelfSigned.pem"
-
 # Load Zoxide
 eval "$(zoxide init zsh)"
 
 # Load Starship Prompt
 eval "$(starship init zsh)"
 
+# FlyEnv
+export PATH="/Users/devhammed/Library/FlyEnv/alias:/Users/devhammed/Library/FlyEnv/env/rustfs:/Users/devhammed/Library/FlyEnv/env/node/bin:/Users/devhammed/Library/FlyEnv/env/node:/Users/devhammed/Library/FlyEnv/env/postgresql/bin:/Users/devhammed/Library/FlyEnv/env/mysql/bin:/Users/devhammed/Library/FlyEnv/env/mailpit/bin:/Users/devhammed/Library/FlyEnv/env/postgresql:/Users/devhammed/Library/FlyEnv/env/mysql:/Users/devhammed/Library/FlyEnv/env/redis/bin:/Users/devhammed/Library/FlyEnv/env/mailpit:/Users/devhammed/Library/FlyEnv/env/php/bin:/Users/devhammed/Library/FlyEnv/env/redis:/Users/devhammed/Library/FlyEnv/env/php:$PATH"
