@@ -1,5 +1,5 @@
 tap "dunglas/frankenphp", trusted: true
-tap "mongodb/brew"
+tap "mongodb/brew", trusted: true
 tap "oven-sh/bun", trusted: true
 tap "shivammathur/extensions", trusted: true
 tap "shivammathur/php", trusted: true
