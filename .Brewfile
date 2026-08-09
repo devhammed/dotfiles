@@ -6,6 +6,8 @@ tap "shivammathur/php", trusted: true
 tap "stripe/stripe-cli", trusted: true
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Cloudflare Tunnel client (formerly Argo Tunnel)
+brew "cloudflared"
 # General-purpose scripting language
 brew "php"
 # Dependency Manager for PHP
@@ -98,6 +100,8 @@ cask "firefox"
 cask "flutter"
 # PHP and Web development environment manager
 cask "flyenv"
+# Go (golang) IDE
+cask "goland"
 # Web browser
 cask "google-chrome"
 # Java IDE by JetBrains
@@ -120,5 +124,3 @@ cask "vlc"
 cask "webstorm"
 # REST, GraphQL and gRPC client
 cask "yaak"
-# Multiplayer code editor
-cask "zed"
