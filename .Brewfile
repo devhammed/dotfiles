@@ -40,6 +40,8 @@ brew "nss"
 brew "oha"
 # Development kit for the Java programming language
 brew "openjdk"
+# Development kit for the Java programming language
+brew "openjdk@21"
 # Object-relational database system
 brew "postgresql@18", link: true
 # Develop and deploy code with zero configuration
