@@ -102,8 +102,6 @@ cask "firefox"
 cask "flutter"
 # PHP and Web development environment manager
 cask "flyenv"
-# Go (golang) IDE
-cask "goland"
 # Web browser
 cask "google-chrome"
 # Java IDE by JetBrains
@@ -112,8 +110,6 @@ cask "intellij-idea"
 cask "localsend"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
-# PHP IDE by JetBrains
-cask "phpstorm"
 # Music streaming service
 cask "spotify"
 # Messaging app with a focus on speed and security
@@ -122,7 +118,5 @@ cask "telegram"
 cask "transmission"
 # Multimedia player
 cask "vlc"
-# JavaScript IDE
-cask "webstorm"
 # REST, GraphQL and gRPC client
 cask "yaak"
