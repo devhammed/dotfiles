@@ -47,6 +47,9 @@ export EDITOR="vim"
 export VISUAL="vim"
 export BROWSER="google-chrome"
 export DIRENV_LOG_FORMAT=""
+export LC_ALL=C
+export PGGSSENCMODE=disable
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 # Android SDK
 export ANDROID_HOME="$HOME/Library/Android/sdk"
