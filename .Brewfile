@@ -28,10 +28,12 @@ brew "gnupg"
 brew "go"
 # Modern load testing tool, using Go and JavaScript
 brew "k6"
+# Command-line interface to LiveKit
+brew "livekit-cli"
 # Web and API based SMTP testing
-brew "mailpit"
+brew "mailpit", link: false
 # Open source relational database management system
-brew "mysql@8.4", link: true
+brew "mysql@8.4"
 # HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
 brew "nginx"
 # Libraries for security-enabled client and server applications
@@ -43,7 +45,7 @@ brew "openjdk"
 # Development kit for the Java programming language
 brew "openjdk@21"
 # Object-relational database system
-brew "postgresql@18", link: true
+brew "postgresql@18"
 # Develop and deploy code with zero configuration
 brew "railway"
 # Persistent key-value database, with built-in net interface
