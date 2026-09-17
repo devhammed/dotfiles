@@ -31,9 +31,9 @@ brew "k6"
 # Command-line interface to LiveKit
 brew "livekit-cli"
 # Web and API based SMTP testing
-brew "mailpit", link: false
+brew "mailpit"
 # Open source relational database management system
-brew "mysql@8.4"
+brew "mysql@8.4", link: true
 # HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
 brew "nginx"
 # Libraries for security-enabled client and server applications
@@ -45,7 +45,7 @@ brew "openjdk"
 # Development kit for the Java programming language
 brew "openjdk@21"
 # Object-relational database system
-brew "postgresql@18"
+brew "postgresql@18", link: true
 # Develop and deploy code with zero configuration
 brew "railway"
 # Persistent key-value database, with built-in net interface
@@ -54,8 +54,6 @@ brew "redis"
 brew "ripgrep"
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
-# Safe, concurrent, practical language
-brew "rust"
 # Rust toolchain installer
 brew "rustup"
 # Cross-shell prompt for astronauts
