@@ -4,6 +4,8 @@ tap "oven-sh/bun", trusted: true
 tap "shivammathur/extensions", trusted: true
 tap "shivammathur/php", trusted: true
 tap "stripe/stripe-cli", trusted: true
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Cloudflare Tunnel client (formerly Argo Tunnel)
@@ -22,6 +24,8 @@ brew "ffmpeg"
 brew "gh"
 # Distributed revision control system
 brew "git"
+# Git extension for versioning large files
+brew "git-lfs"
 # GNU Privacy Guard (OpenPGP)
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
@@ -52,8 +56,8 @@ brew "railway"
 brew "redis"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Powerful, clean, object-oriented scripting language
-brew "ruby"
+# Safe, concurrent, practical language
+brew "rust"
 # Rust toolchain installer
 brew "rustup"
 # Cross-shell prompt for astronauts
