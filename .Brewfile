@@ -4,6 +4,7 @@ tap "oven-sh/bun", trusted: true
 tap "shivammathur/extensions", trusted: true
 tap "shivammathur/php", trusted: true
 tap "stripe/stripe-cli", trusted: true
+tap "typesense/tap", trusted: true
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -80,6 +81,10 @@ brew "oven-sh/bun/bun"
 brew "shivammathur/extensions/event@8.4", trusted: true
 # Event PHP extension
 brew "shivammathur/extensions/event@8.5", trusted: true
+# Imagick PHP extension
+brew "shivammathur/extensions/imagick@8.4", trusted: true
+# Imagick PHP extension
+brew "shivammathur/extensions/imagick@8.5", trusted: true
 # Redis PHP extension
 brew "shivammathur/extensions/phpredis@8.4", trusted: true
 # Redis PHP extension
@@ -124,3 +129,4 @@ cask "transmission"
 cask "vlc"
 # REST, GraphQL and gRPC client
 cask "yaak"
+npm "http-server"
