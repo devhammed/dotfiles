@@ -11,6 +11,8 @@ brew "ruby"
 brew "bat"
 # Cloudflare Tunnel client (formerly Argo Tunnel)
 brew "cloudflared"
+# Postgres C API library
+brew "libpq"
 # General-purpose scripting language
 brew "php"
 # Dependency Manager for PHP
@@ -49,6 +51,8 @@ brew "oha"
 brew "openjdk"
 # Development kit for the Java programming language
 brew "openjdk@21"
+# PHP Installer for Extensions
+brew "pie"
 # Object-relational database system
 brew "postgresql@18", link: true
 # Develop and deploy code with zero configuration
@@ -129,4 +133,5 @@ cask "transmission"
 cask "vlc"
 # REST, GraphQL and gRPC client
 cask "yaak"
-npm "http-server"
+# Multiplayer code editor
+cask "zed"
