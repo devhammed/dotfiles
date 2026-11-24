@@ -1,0 +1,50 @@
+{
+  "edit_predictions": {
+    "provider": "copilot",
+  },
+  "project_panel": {
+    "dock": "left",
+    "auto_fold_dirs": false,
+    "git_status_indicator": true,
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "git_panel": {
+    "dock": "left",
+  },
+  "agent": {
+    "play_sound_when_agent_done": "always",
+    "tool_permissions": {
+      "default": "allow",
+    },
+    "default_profile": "write",
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "base_keymap": "JetBrains",
+  "ui_font_size": 18,
+  "buffer_font_size": 16,
+  "format_on_save": "on",
+  "theme": {
+    "mode": "system",
+    "light": "Dracula Solid",
+    "dark": "Dracula Solid",
+  },
+  "languages": {
+    "PHP": {
+      "formatter": "language_server",
+      "language_servers": [
+        "phpantom",
+        "!intelephense",
+        "!phpactor",
+        "!phptools",
+        "...",
+      ],
+    },
+  },
+}
