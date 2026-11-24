@@ -5,6 +5,7 @@
   "project_panel": {
     "dock": "left",
     "auto_fold_dirs": false,
+    "auto_reveal_entries": false,
     "git_status_indicator": true,
   },
   "outline_panel": {
