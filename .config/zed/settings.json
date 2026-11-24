@@ -34,6 +34,29 @@
     "light": "Dracula Solid",
     "dark": "Dracula Solid",
   },
+  "lsp": {
+    "typescript-language-server": {
+      "initialization_options": {
+        "preferences": {
+          "importModuleSpecifierPreference": "non-relative",
+        },
+      },
+    },
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "preferences": {
+            "importModuleSpecifier": "non-relative",
+          },
+        },
+        "javascript": {
+          "preferences": {
+            "importModuleSpecifier": "non-relative",
+          },
+        },
+      },
+    },
+  },
   "languages": {
     "PHP": {
       "formatter": "language_server",
