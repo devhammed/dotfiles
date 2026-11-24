@@ -23,8 +23,6 @@
     },
     "default_profile": "write",
     "dock": "right",
-    "favorite_models": [],
-    "model_parameters": [],
   },
   "base_keymap": "JetBrains",
   "ui_font_size": 18,
