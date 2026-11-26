@@ -1,4 +1,12 @@
 {
+  "agent_servers": {
+    "github-copilot-cli": {
+      "default_config_options": {
+        "mode": "https://agentclientprotocol.com/protocol/session-modes#autopilot",
+      },
+      "type": "registry",
+    },
+  },
   "edit_predictions": {
     "provider": "copilot",
   },
@@ -45,11 +53,17 @@
     "vtsls": {
       "settings": {
         "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
           "preferences": {
             "importModuleSpecifier": "non-relative",
           },
         },
         "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
           "preferences": {
             "importModuleSpecifier": "non-relative",
           },
