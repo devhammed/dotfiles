@@ -1,6 +1,7 @@
 tap "dunglas/frankenphp", trusted: true
 tap "mongodb/brew", trusted: true
 tap "oven-sh/bun", trusted: true
+tap "runkids/tap", trusted: true
 tap "shivammathur/extensions", trusted: true
 tap "shivammathur/php", trusted: true
 tap "stripe/stripe-cli", trusted: true
@@ -48,8 +49,6 @@ brew "nss"
 # HTTP load generator, inspired by rakyll/hey with tui animation
 brew "oha"
 # Development kit for the Java programming language
-brew "openjdk"
-# Development kit for the Java programming language
 brew "openjdk@21"
 # PHP Installer for Extensions
 brew "pie"
@@ -81,6 +80,8 @@ brew "yadm"
 brew "zoxide"
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun"
+# Figma screens for coding agents, with no Figma app, login or API limit
+brew "runkids/tap/figlens", trusted: true
 # Event PHP extension
 brew "shivammathur/extensions/event@8.4", trusted: true
 # Event PHP extension
@@ -89,14 +90,20 @@ brew "shivammathur/extensions/event@8.5", trusted: true
 brew "shivammathur/extensions/imagick@8.4", trusted: true
 # Imagick PHP extension
 brew "shivammathur/extensions/imagick@8.5", trusted: true
+# Imagick PHP extension
+brew "shivammathur/extensions/imagick@8.6", trusted: true
 # Redis PHP extension
 brew "shivammathur/extensions/phpredis@8.4", trusted: true
 # Redis PHP extension
 brew "shivammathur/extensions/phpredis@8.5", trusted: true
+# Redis PHP extension
+brew "shivammathur/extensions/phpredis@8.6", trusted: true
 # Xdebug PHP extension
 brew "shivammathur/extensions/xdebug@8.4", trusted: true
 # Xdebug PHP extension
 brew "shivammathur/extensions/xdebug@8.5", trusted: true
+# Xdebug PHP extension
+brew "shivammathur/extensions/xdebug@8.6", trusted: true
 # General-purpose scripting language
 brew "shivammathur/php/php", trusted: true
 # General-purpose scripting language
@@ -107,8 +114,6 @@ brew "stripe/stripe-cli/stripe"
 cask "discord"
 # App to build and share containerised applications and microservices
 cask "docker-desktop"
-# Collaborative team software
-cask "figma"
 # Web browser
 cask "firefox"
 # UI toolkit for building applications for mobile, web and desktop
